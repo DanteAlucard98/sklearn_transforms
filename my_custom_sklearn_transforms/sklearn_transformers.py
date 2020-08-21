@@ -15,11 +15,4 @@ class DropColumns(BaseEstimator, TransformerMixin):
         # Retornamos um novo dataframe sem as colunas indesejadas
         return data.drop(labels=self.columns, axis='columns')
     
-# Crear un objeto ``SimpleImputer``
-si = SimpleImputer(
-    missing_values=np.nan,  # los valores que faltan son del tipo ``np.nan`` (Pandas estándar)
-    strategy='constant',  # la estrategia elegida es cambiar el valor faltante por una constante
-    fill_value=0,  # la constante que se usará para completar los valores faltantes es un int64 = 0
-    verbose=0,
-    copy=True
-)
+ 
